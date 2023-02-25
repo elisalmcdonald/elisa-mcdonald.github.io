@@ -17,4 +17,7 @@
 2) Select bootcamp session
 3) Select project to submit
 
-## How to Push Work o GitHub
+## How to Push Work to GitHub
+1) In termial, type => git add -A
+2) In termial, type => git commit -m "description of commit"
+3) In terminal, type => git push
