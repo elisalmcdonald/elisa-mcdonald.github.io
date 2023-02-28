@@ -111,6 +111,13 @@ function beginsWith(string, char) {
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
+// if string ends with the input char (uppercase or lowercase) 
+    // return true
+    if (string[string.length - 1] === char.toUpperCase() || string[string.length - 1] === char.toLowerCase()) {
+        return true
+    } else { // else return false
+        return false 
+    };
 
 
     // YOUR CODE ABOVE HERE //
@@ -124,7 +131,8 @@ function endsWith(string, char) {
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    // return the two input strings added together
+    return stringOne + stringTwo
 
     // YOUR CODE ABOVE HERE //
 }
@@ -142,7 +150,8 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    // return array as string using join
+    return args.join('')
 
     // YOUR CODE ABOVE HERE //
 }
@@ -159,7 +168,13 @@ function join(stringOne, stringTwo) {
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+    // if first string > second string
+    // return first string
+    if (stringOne.length > stringTwo.length) {
+    return stringOne
+    } else { // else reutrn second string
+    return stringTwo
+};
 
     // YOUR CODE ABOVE HERE //
 }
