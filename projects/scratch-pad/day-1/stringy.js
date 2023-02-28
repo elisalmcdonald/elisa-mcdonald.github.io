@@ -27,7 +27,8 @@ return string.length;
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+    // return new string in lowercase
+   return string.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -38,7 +39,8 @@ function toLowerCase(string) {
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+// return new string in uppercase
+return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -59,7 +61,11 @@ function toUpperCase(string) {
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 
+    // return new string in dash-case
+    //return string.toLowerCase().split(' ').join('-');
 
+    // return new string in dash-case using replace
+    return string.toLowerCase().replaceAll(' ', '-');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -79,7 +85,13 @@ function toDashCase(string) {
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-    
+    // if string begins with the input char (uppercase or lowercase) 
+    // return true
+    if (string[0] === char.toUpperCase() || string[0] === char.toLowerCase()) {
+        return true
+    } else { // else return false
+        return false 
+    };
 
     // YOUR CODE ABOVE HERE //
 }
