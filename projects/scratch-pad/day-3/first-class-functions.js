@@ -15,7 +15,7 @@ function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
     
-    // return function
+    // return function if value is greater than base
     return function (value) {
         return value > base;
     }
@@ -31,7 +31,7 @@ function createGreaterThanFilter(base) {
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-    // return function
+    // return function if value is less than base
     return function (value) {
         return value < base
     }
@@ -83,8 +83,12 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
+
+var array = [];
+for (var i = 0; i < strings.length; i++) {
+    array.push(modify(strings[i]));
+}  
+return array 
     
     
     // YOUR CODE ABOVE HERE //
