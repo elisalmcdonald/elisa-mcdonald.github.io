@@ -105,8 +105,15 @@ return array
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
+   
+    // loop through strings
+    for (var i = 0; i <= strings.length - 1; i++) {// i = 0, 1, ... strings.length - 1
+        // if current string fails test 
+        // return false
+        if (test(strings[i]) === false) {
+            return false; 
+        }  // if all strings pass test return true 
+    } return true; 
     
     
     // YOUR CODE ABOVE HERE //
