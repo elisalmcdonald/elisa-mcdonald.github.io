@@ -58,8 +58,28 @@ function makeContactList() {
             contacts.push(contact);
         },
         findContact: function(fullName) {
-            var array = fullName.split(' ')
+            var array = fullName.split(' ');
+            for (var i = 0; i < contacts.length; i++) {
+                if (array[0] === contacts[i].nameFirst && array[1] === contacts[i].nameLast) {
+                return contacts[i]
+                }
+            }
+        },
+        removeContact: function(contact) {
+            for (var i = 0; i < contacts.length; i++) {
+                if (contacts[i].id === contact.id) {
+                    contacts.splice(i, 1)
+                }
+            }
+        },
+        printAllContactNames: function() {
+            var string = ''
+            for (var i = 0; i < contacts.length - 1; i++) {
+                string += contacts[i].nameFirst + ' ' + contacts[i].nameLast + '\n'  
+            } string += contacts[contacts.length - 1].nameFirst + ' ' + contacts[contacts.length - 1].nameLast
+            return string
         }
+
     }
 }
 
