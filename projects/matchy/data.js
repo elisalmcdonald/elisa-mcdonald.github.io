@@ -13,23 +13,36 @@
 //////////////////////////////////////////////////////////////////////
 
 // declare variable and assign to empty object 
-var animal = {}
+var animal = {};
 // use dot notation to assign key/value pair
-animal.species = 'cat'
+animal.species = 'cat';
 // use bracket notation to assign key/value pair
-animal['name'] = 'coco'
+animal['name'] = 'coco';
 // use dot notation to assign property with empty array
-animal.noises = []
+animal.noises = [];
 // print to the console
-console.log(animal)
-
-
+console.log(animal);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+// declare variable and assign to empty array
+var noises = [];
+// use bracket notation to add first element
+noises[0] = 'meow';
+// use .push to add last element
+noises.push('bark');
+// use .unshift to add element to beginning of array
+noises.unshift('rawr');
+// use bracket notation to add element to end of array using length property
+noises[noises.length] = 'buzz';
+// log the length to the console
+console.log(noises.length);
+// log the last element 
+console.log(noises[noises.length - 1])
+// log the whole array
+console.log(noises)
 
 
 //////////////////////////////////////////////////////////////////////
