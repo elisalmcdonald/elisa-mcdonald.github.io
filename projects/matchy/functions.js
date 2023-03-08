@@ -9,38 +9,60 @@
  * and read every instruction carefully.
  */
 
-const { animals } = require("./data");
+//const { animals } = require("./data");
 
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function search(array, string) {
-    for (var i = 0; i <= array.length; i++) {
-        if (array[i] === animals.name) {
-            return 
-        } else {
-            return null
-        }
-    }
-} 
-
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].name === string) {
+            return array[i];
+        } 
+    } return null; 
+    } 
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function replace(animals, name, replacement) {
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === name) {
+            animals[i] = replacement
+        }
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function remove(animals, name) {
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === name) {
+            animals.splice(i, 1)
+        }
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+function add(animals, animal) {
+    if (animal.name.length > 0 && animal.species.length > 0) {
+        var test = true
+        for (var i = 0; i < animals.length; i++) {
+            if (animals[i].name === animal.name){
+                test = false
+                }
 
+            }  
+            if (test === true) {
+                animals.push(animal);
+        } 
+        } 
+}
 
 
 /**
