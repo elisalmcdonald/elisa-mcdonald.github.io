@@ -29,7 +29,8 @@ x /= 2 // => x = x / 2
 x %= 2 // => x = x % 2
 x **= 2 // => x = x ** 2
 
-// 2. 
+// 2. +, -, *, /, **, %, ++, --
+
 
 // 3.  == (loosely equal to), === (strictly equal to), != (loosely not equal to), !== (strictly not equal to), 
 //     > (greater than), < (less than), >= (greater than or equal to, <= (less than or equal to)
