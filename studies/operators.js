@@ -30,7 +30,14 @@ x %= 2 // => x = x % 2
 x **= 2 // => x = x ** 2
 
 // 2. +, -, *, /, **, %, ++, --
-
+2 + 2 // => 4
+2 - 2 // => 0
+2 * 4 // => 8
+4 / 2 // => 2
+4**   // => 16
+5 % 2 // => 1
+x++   // => 
+x--   // =>
 
 // 3.  == (loosely equal to), === (strictly equal to), != (loosely not equal to), !== (strictly not equal to), 
 //     > (greater than), < (less than), >= (greater than or equal to, <= (less than or equal to)
