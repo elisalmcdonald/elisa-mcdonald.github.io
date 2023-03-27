@@ -10,7 +10,11 @@
  * 2. Var, Let, Const: Var, Let, and Const are the 3 declarative keywords. Var can be updated and re-declared,
  * Let can be updated but not re-declared, and const can't be updated or re-declared.
  * 
- * 3. Hoisting: 
+ * 3. Hoisting: A behavior of moving declarations to the top of the current scope. JavaScript
+ * only hoists declarations, not initializations. A variable can be used before it's declared. Let and const 
+ * variables are hoisted to the top of the block, but not initialized. Let variables used before they're 
+ * declared will result in a ReferenceError and const variables used before they're declared will be 
+ * a syntax error, so the code will not run.
  */
 
 // 1. Declaration and Assignment:

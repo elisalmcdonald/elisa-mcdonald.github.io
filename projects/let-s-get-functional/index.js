@@ -157,7 +157,42 @@ var topThreeTags = function(array) {
         } return accumulator;
     }, {});
 
-    
+    let arr = Object.entries(commonTags);
+    let val1 = arr[0][1]; 
+    var key1 = arr[0][0];
+    var index1 = 0
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i][1] > val1) {
+            val1 = arr[i][1];
+            key1 = arr[i][0];
+            index1 = i
+        }
+    }
+    arr.splice(index1, 1)
+
+    let val2 = arr[0][1]; 
+    var key2 = arr[0][0];
+    var index2 = 0
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i][1] > val2) {
+            val2 = arr[i][1];
+            key2 = arr[i][0];
+            index2 = i
+        }
+    }
+    arr.splice(index2, 1)
+
+    let val3 = arr[0][1]; 
+    var key3 = arr[0][0];
+    var index3 = 0
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i][1] > val3) {
+            val3 = arr[i][1];
+            key3 = arr[i][0];
+            index3 = i
+        }
+    }
+   return [key1, key2, key3] 
 }
 
 

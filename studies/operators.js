@@ -15,12 +15,16 @@
  * 
  * 4. Logical Operators: Used to compare two variables or values and determine the logic whether it's true or false.
  * 
- * 5. Unary Operators (!, typeOf, -):
+ * 5. Unary Operators (!, typeOf, -): 
  * 
- * 6. Ternary Operator (a ? b : c): 
+ * 6. Ternary Operator (a ? b : c): The only JavaScript operator that takes 3 operands: a condition followed 
+ * by a ?, then an expression to execute if the condition is truthy followed by a :, and then the expression 
+ * to execute if the condition is falsy. This operator is an alternative to using an if else statement.
+
+
  */
 
-// 1.  =, +=, -=, *=, /=, %=, **=
+// 1. Assignment Operators:  =, +=, -=, *=, /=, %=, **=
 x = 2 
 x += 2 // => x = x + 2
 x -= 2 // => x = x - 2
@@ -29,7 +33,7 @@ x /= 2 // => x = x / 2
 x %= 2 // => x = x % 2
 x **= 2 // => x = x ** 2
 
-// 2. +, -, *, /, **, %, ++, --
+// 2. Arithmetic Operators:  +, -, *, /, **, %, ++, --
 2 + 2 // => 4
 2 - 2 // => 0
 2 * 4 // => 8
@@ -39,19 +43,34 @@ x **= 2 // => x = x ** 2
 x++   // => 
 x--   // =>
 
-// 3.  == (loosely equal to), === (strictly equal to), != (loosely not equal to), !== (strictly not equal to), 
-//     > (greater than), < (less than), >= (greater than or equal to, <= (less than or equal to)
+// 3. Comparison Operators:  == (loosely equal to (returns true if value is the same)), === (strictly equal to (returns true if value 
+// and datatype are the same ), != (loosely not equal to (returns true if value is not the same)), 
+// !== (strictly not equal to (returns true if value and datatype aren't the same)), > (greater than), 
+// < (less than), >= (greater than or equal to, <= (less than or equal to)
 
 var x = 5
 
-
+x == '5' // => true
+x === '5' // => false
+x != 6 // => true
+x !== '5' // => true
 x > 10 // => false
 x < 10 // => true
 x >= 10 // => false
 x <= 10 // => true 
 
-// 4.  
+// 4. Logical Operators:  && (and), || (or), ! (not (opposite))
+let x = 2
+let y = 6
+x < y && y === 6 // => true 
+x > y || y < 6 // => false
+!x === 3 // => true
 
-// 5.
 
-// 6.
+// 5. Unary Operators (!, typeOf, -): 
+
+
+// 6. Ternary Operator:  (a ? b : c)
+let number = 99;
+let lessThan100 = number < 100 ? 'Less than 100!' : 'Sorry, your number is not under 100.'
+console.log(lessThan100); // 'Less than 100!'  

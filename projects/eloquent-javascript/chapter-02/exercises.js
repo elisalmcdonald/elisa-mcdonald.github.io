@@ -54,7 +54,7 @@ function drawChessboard(number) {
     array.push(odd)
   } 
   } array.push('')
-  return array.join('\n')
+  console.log(array.join('\n'))
 }
 
 ////////////////////////////////////////////////////////////////////////////////
