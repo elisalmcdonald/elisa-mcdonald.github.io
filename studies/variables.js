@@ -51,3 +51,9 @@ console.log(animal) // prints => error message
 console.log(animal) // prints => error message 
 
 // 3. Hoisting 
+
+// (var person) // var variable gets hoisted to top of global scope
+console.log(person) //var variables are hoisted with no value (prints undefined)
+person = 'Elisa'; // var variables can be used before they are declared
+console.log(person); // prints 'Elisa'
+var person;

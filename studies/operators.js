@@ -15,7 +15,8 @@
  * 
  * 4. Logical Operators: Used to compare two variables or values and determine the logic whether it's true or false.
  * 
- * 5. Unary Operators (!, typeOf, -): 
+ * 5. Unary Operators (!, typeOf, -): Unlike other operators, the unary operator is an operation with  only one 
+ * operand, only applied to a single value/expression. 
  * 
  * 6. Ternary Operator (a ? b : c): The only JavaScript operator that takes 3 operands: a condition followed 
  * by a ?, then an expression to execute if the condition is truthy followed by a :, and then the expression 
@@ -66,9 +67,12 @@ x < y && y === 6 // => true
 x > y || y < 6 // => false
 !x === 3 // => true
 
-
 // 5. Unary Operators (!, typeOf, -): 
-
+typeof 'elisa'; // returns 'string'
+typeof true; // returns 'boolean'
+typeof 12; // returns 'number'
+!true // opposite (returns false)
+-'-3' // returns 3 (switches value from negative to positive)
 
 // 6. Ternary Operator:  (a ? b : c)
 let number = 99;
