@@ -43,7 +43,6 @@ module.exports.identity = identity;
  * @returns {string}: Function returns the type of <value> as a string.  
  */
 
-
 function typeOf(value) {
     if (Array.isArray(value)) { // checking if value is array
         return "array";
