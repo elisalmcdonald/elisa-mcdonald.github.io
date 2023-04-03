@@ -103,28 +103,48 @@ var contestants = function(array){
 // 3.
 // Using the native filter method with our `dogs` array, 
 // create an array called `filterSpecies` that will filter out all of the species that are not dogs! 
-var filterSpecies;
+var filterSpecies = dogs.filter(function(current){
+    return current.species === 'dog'
+})
 
 // 4. 
 // Using the spread operator, assign a copy of our `filterSpecies` array to our `dogContestants` variable.
-var dogContestants;
+var dogContestants = [...filterSpecies]
 
-// 5. 
 // Now that we have our `dogContestants` array, we need to add a `class` property to each dog object.
 //     Using the native map method, add a key of `class` with the value:
 //         - "red" if the dog's weight is between 0 and 10.
 //         - "yellow" if the dog's weight is between 11 and 20.
 //         - "green" if the dog's weight is 21 or over.
 
-var dogsWithClasses;
-    
+var dogsWithClasses = dogContestants.map(function(current){
+    if (current.weight >= 21){
+        current.class = 'green'
+    } else if (current.weight >= 11){
+        current.class = 'yellow'
+    } else {
+        current.class = 'red'
+    } return current
+})
 
 // 6.
 // The votes are in! We have an array of the top dogs in each class
 //     Using recursion, copy all of the properties into one object and return that object.
-var firstInClass;
+var firstInClass = function(array, output = {}){
+    // base
+    if (array.length === 0){
+        return output
+    }
+    output = {...output, ...array[0]}
+
+    // recurison
+    return firstInClass(array.slice(1), output)
+}
 
 // 7.
 // For statistical reasons, lets count all of the votes we recieved for our dog and non-dog contestants!
 //     Using reduce, find the sum of the votes casted.
-var votes;
+var votes = dogs.reduce(function(acc, current){
+    acc += current.votes 
+    return acc
+}, 0)

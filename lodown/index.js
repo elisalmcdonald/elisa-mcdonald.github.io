@@ -40,7 +40,7 @@ module.exports.identity = identity;
  * typeOf: Function takes in any value, checks to see what datatype it is, and returns it as a string.
  * 
  * @param {Any value} value: Function takes in any value.
- * @returns {Any value}: Function returns the type of <value> as a string.  
+ * @returns {string}: Function returns the type of <value> as a string.  
  */
 
 
