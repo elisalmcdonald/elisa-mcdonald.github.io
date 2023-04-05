@@ -10,6 +10,10 @@
  * of code. 
  *
  * 2. For loops: Best for iterating over arrays. 
+ * A for loop is comprised of 3 statements:
+ * var index = 0; (the start statement initializes an index (in this case 0))
+ * index < array.length; (the stop statement gives the condition when to stop looping)
+ * index++ (the update statement increments/decrements the index (in case up by 1))
  * 
  * 3. For-in loops: Pulls out all the keys of an object one at a time. 
  * 

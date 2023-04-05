@@ -103,8 +103,8 @@ var contestants = function(array){
 // 3.
 // Using the native filter method with our `dogs` array, 
 // create an array called `filterSpecies` that will filter out all of the species that are not dogs! 
-var filterSpecies = dogs.filter(function(current){
-    return current.species === 'dog'
+var filterSpecies = dogs.filter(function(curr){
+    return curr.species === 'dog'
 })
 
 // 4. 
@@ -117,14 +117,14 @@ var dogContestants = [...filterSpecies]
 //         - "yellow" if the dog's weight is between 11 and 20.
 //         - "green" if the dog's weight is 21 or over.
 
-var dogsWithClasses = dogContestants.map(function(current){
-    if (current.weight >= 21){
-        current.class = 'green'
-    } else if (current.weight >= 11){
-        current.class = 'yellow'
+var dogsWithClasses = dogContestants.map(function(curr){
+    if (curr.weight >= 21){
+        curr.class = 'green'
+    } else if (curr.weight >= 11){
+        curr.class = 'yellow'
     } else {
-        current.class = 'red'
-    } return current
+        curr.class = 'red'
+    } return curr
 })
 
 // 6.
@@ -135,6 +135,7 @@ var firstInClass = function(array, output = {}){
     if (array.length === 0){
         return output
     }
+
     output = {...output, ...array[0]}
 
     // recurison
@@ -144,7 +145,7 @@ var firstInClass = function(array, output = {}){
 // 7.
 // For statistical reasons, lets count all of the votes we recieved for our dog and non-dog contestants!
 //     Using reduce, find the sum of the votes casted.
-var votes = dogs.reduce(function(acc, current){
-    acc += current.votes 
+var votes = dogs.reduce(function(acc, curr){
+    acc += curr.votes
     return acc
 }, 0)

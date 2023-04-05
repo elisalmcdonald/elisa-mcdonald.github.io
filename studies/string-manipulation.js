@@ -6,8 +6,8 @@
  * 
  * 1. With Operators: They can be concatenated with either the + or += operators.
  *
- * 2. With string methods: They can also be mutated using built in methods for strings ex: .length, 
- * .slice, .toUpperCase, etc.
+ * 2. With string methods: They can also make manipulated copies of themselves using built in methods for 
+ * strings ex: .length, .slice, .toUpperCase, etc.
  * 
  * 
 

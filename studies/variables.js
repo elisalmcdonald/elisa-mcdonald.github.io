@@ -50,6 +50,12 @@ console.log(animal) // prints => error message
 // animal = 'bunny' // won't work because you can't update const
 console.log(animal) // prints => error message 
 
+// let and const variables are block scoped
+if (2 < 3){
+    let color = 'pink'
+}
+console.log(color) // => prints reference error because let is block scoped
+
 // 3. Hoisting 
 
 // (var person) // var variable gets hoisted to top of global scope

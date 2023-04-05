@@ -41,9 +41,10 @@ add(1, 2) // 1 and 2 are the arguments (arguments are used to call the function 
 // of the parameters)
 
 // 3. Function syntax:
-function nameOfFunction(parameter1, parameter2, parameter3){
+function nameOfFunction(parameter1, parameter2, parameter3){ // nameOfFunction is a declared function
     // code to be executed; 
 }
+nameOfFunction(1, 2, 3) // invoking nameOfFunction
 
 // 4. Assigning function to variable:
 var subtract = function(a, z) {  // declaring variable subject and assigning to function
@@ -62,6 +63,17 @@ console.log(total) // => prints 30
 function subtract(price1, price2){
     return price1 - price2;
 }
+
+function subtractTwo(a, b){
+    var difference = a - b; // function scoped variable 
+}
+console.log(difference); // prints Reference Error: difference is not defined 
+
+var a = 2; // global scoped variable
+function add(b){
+    console.log(a + b) // prints => 2 + b
+}
+add(6); prints => 8
 
 // 7. Closures:
 function multiply(x){ // outer function
